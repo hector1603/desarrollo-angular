@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.btn-primary {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+.btn-success {
+    background-color: #198754;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}

@@ -1,0 +1,21 @@
+<div class="'wrapper">
+    <img src="/assets/img/perfil.jpg" alt="Foto de perfil" class="perfil-img">
+    <h1 class="title">Mi nombre es {{ nombre }}</h1>
+    <p>Tengo {{ edad }} años</p>
+    <p>Soy {{ ocupacion }}</p>
+    <p>Mi dirección es {{ direccion}}</p>
+    <p>Mi teléfono es {{ telefono }}</p>
+
+    <!--<app-transacciones></app-transacciones>-->
+    <!--<app-prestamos></app-prestamos>-->
+    
+    <button class="btn btn-primary" (click)="cambiarEdad()">Cambiar edad</button>
+    <button class="btn btn-primary" (click)="cambiarDireccion()">Cambiar dirección</button>
+
+    <button class="btn btn-success" (click)="ocultarCuenta(true)">Mostrar el componente Cuenta</button>
+    <button class="btn btn-danger"(click)="ocultarCuenta(false)">Ocultar el componente Cuenta</button>
+    
+    @if(mostrar_cuenta) {
+        <app-cuenta></app-cuenta>
+    }
+</div>
