@@ -13,3 +13,25 @@ a {
     font-size: 20px;
     border-radius: 5px;
 }
+
+.sub-title {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.aprobado {
+    background-color: green;
+    border-radius: 20px;
+    padding: 2px 8px;
+    color: #fff;
+}
+
+.pendiente {
+    background-color: orange;
+    border-radius: 20px;
+    padding: 2px 8px;
+}

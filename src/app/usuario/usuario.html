@@ -11,3 +11,14 @@
 }
 
 <button class="btn btn-primary" (click)="cambiarDireccion()">Cambiar dirección</button>
+
+<h3 class="sub-title">Marcas de Autos</h3>
+
+<ul>
+    @for (marca of marcaAutos; track marca.id;
+        let indice = $index, contador = $count, par = $even, impar = $odd) {
+        <li class="card">{{ marca.id }} - {{ marca.nombre }}</li>
+    } @empty {
+        <p class="message">La lista de autos está vacia!</p>
+    }
+</ul>

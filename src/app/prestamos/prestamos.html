@@ -9,3 +9,18 @@
     <p>Lo sentimos, este enlace no está disponible.</p>
     <button class="btn btn-default" (click)="cambiarEstadoEnlace()">Activar enlace</button>
 }
+
+<h3 class="sub-title">Lista de prestamos</h3>
+<hr>
+
+<ul>
+    @for (prestamo of prestamosList; track prestamo.id) {
+        @if(prestamo.estado == 'Aprobado') {
+            <li>Monto: {{ prestamo.monto }} - <span class="aprobado">{{ prestamo.estado }}</span></li>
+        } @else {
+            <li>Monto: {{ prestamo.monto }} - <span class="pendiente">{{ prestamo.estado }}</span></li>
+        }
+    } @empty {
+        <p class="message">No existen prestamos!</p>
+    }
+</ul>

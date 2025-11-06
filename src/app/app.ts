@@ -7,7 +7,7 @@ import { Prestamos } from './prestamos/prestamos';
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos],
+  imports: [Prestamos, Usuario],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
