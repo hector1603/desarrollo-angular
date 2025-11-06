@@ -1,1 +1,13 @@
+<h1 class="title">Plantillas en Angular</h1>
+
 <p>usuario works!</p>
+
+<a [href]="web" [class.existe] = "redirigir" target="_blank">Ir a la web</a>
+
+@if (redirigir) {
+    <p>El enlace {{ web }} es válido</p>
+} @else {
+    <p>El enlace es invalido!</p>
+}
+
+<button class="btn btn-primary" (click)="cambiarDireccion()">Cambiar dirección</button>

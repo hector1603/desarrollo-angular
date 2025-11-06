@@ -1,1 +1,11 @@
-<p>prestamos works!</p>
+<h2>prestamos works!</h2>
+
+<a [href]="enlaceWeb" [class.activo] = "estadoEnlace" target="_blank">{{(estadoEnlace) ? 'Ir a la web' : 'Enlace desactivado'}}</a>
+
+@if(estadoEnlace) {
+    <p>¡El enlace funciona correctamente!</p>
+    <button class="btn btn-success" (click)="cambiarEstadoEnlace()">Desactivar enlace</button>
+} @else {
+    <p>Lo sentimos, este enlace no está disponible.</p>
+    <button class="btn btn-default" (click)="cambiarEstadoEnlace()">Activar enlace</button>
+}

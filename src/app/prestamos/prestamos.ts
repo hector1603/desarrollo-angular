@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
+  public enlaceWeb: string = "https://linkedin.com"
+  estadoEnlace = true;
 
+  cambiarEstadoEnlace() {
+    if (this.estadoEnlace) {
+      this.estadoEnlace = false;
+    } else {
+      this.estadoEnlace = true;
+    }
+  }
 }

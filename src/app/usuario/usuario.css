@@ -1,0 +1,11 @@
+a {
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+}
+
+.existe {
+    background-color: green;
+    color: #fff;
+    padding: 8px;
+}

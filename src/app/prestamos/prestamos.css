@@ -1,0 +1,15 @@
+a {
+    background-color: orange;
+    color: #000;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.activo {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
