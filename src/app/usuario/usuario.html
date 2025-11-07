@@ -22,3 +22,15 @@
         <p class="message">La lista de autos está vacia!</p>
     }
 </ul>
+
+@switch (usuario.rol) {
+    @case ('admin') {
+        <app-ventas></app-ventas>
+    }
+    @case ('user') {
+        <p>Eres un usuario normal</p>
+    }
+    @default {
+        <p>Eres un invitado!</p>
+    }
+}

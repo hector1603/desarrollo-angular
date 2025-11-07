@@ -24,3 +24,18 @@
         <p class="message">No existen prestamos!</p>
     }
 </ul>
+
+@switch (prestamo.tipo) {
+    @case ('personal') {
+        <p>El préstamo es de tipo personal</p>
+    }
+    @case ('hipotecario') {
+        <app-transacciones></app-transacciones>
+    }
+    @case ('vehicular') {
+        <p>El préstamo es para la compra de un vehiculo!</p>
+    }
+    @default {
+        <p>Tipo de prestamo no reconocido!</p>
+    }
+}

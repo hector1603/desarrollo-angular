@@ -8,6 +8,11 @@ li {
     padding: 8px;
 }
 
+.sub-title {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
 .btn {
     padding: 10px;
     margin: 10px;
