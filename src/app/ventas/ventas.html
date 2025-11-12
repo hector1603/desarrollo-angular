@@ -1,2 +1,6 @@
 <h1>Directivas en Angular</h1>
 <h2 [ngClass]="(mostrar === 'si') ? 'activo' : 'suspendido'">{{ estado ? 'Soy un programador activo' : 'Soy un programador jubilado' }}</h2>
+
+<h3 [ngStyle]="(mostrar == 'si') ? {'background-color': 'red', 'padding': '10px'} : {'background-color': 'blue', 'padding': '10px'}">Escuela de programación KrakeDev</h3>
+
+<p [ngStyle]="estilos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita asperiores saepe architecto eos mollitia dicta blanditiis rerum illum sit laboriosam, officiis, nam laborum praesentium nostrum quisquam velit dolorum vero quo?</p>
