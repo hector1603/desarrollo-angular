@@ -4,10 +4,11 @@ import { Producto } from "./producto/producto";
 import { Perfil } from "./perfil/perfil";
 import { Usuario } from './usuario/usuario';
 import { Prestamos } from './prestamos/prestamos';
+import { Ventas } from './ventas/ventas';
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, Usuario],
+  imports: [Ventas],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

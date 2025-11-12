@@ -14,9 +14,9 @@
 <hr>
 
 <ul>
-    @for (prestamo of prestamosList; track prestamo.id) {
+    @for (prestamo of (prestamosList | slice:0:4); track prestamo.id) {
         @if(prestamo.estado == 'Aprobado') {
-            <li>Monto: {{ prestamo.monto }} - <span class="aprobado">{{ prestamo.estado }}</span></li>
+            <li>Monto: {{ prestamo.monto | currency}} - <span class="aprobado">{{ prestamo.estado }}</span></li>
         } @else {
             <li>Monto: {{ prestamo.monto }} - <span class="pendiente">{{ prestamo.estado }}</span></li>
         }
@@ -39,3 +39,8 @@
         <p>Tipo de prestamo no reconocido!</p>
     }
 }
+
+<h3>Ocupando nuestra primera Pipe creada</h3>
+<p>Transformamos cada letra de la frase "<strong>{{ frase }}</strong>" en su respectivo código ASCII</p>
+
+{{ frase | convertirASCII }}

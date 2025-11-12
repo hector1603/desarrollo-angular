@@ -34,3 +34,28 @@
         <p>Eres un invitado!</p>
     }
 }
+
+<h3>Mas cosas en las plantillas de Angular</h3>
+<ng-container>
+    <h4>Esto está en un contenedor de Angular</h4>
+</ng-container>
+
+@let pais = 'Bolivia';
+@let saludo = 'Hola desde ' + pais;
+
+{{ saludo }}
+
+
+<!-- 
+@defer {
+    <app-producto></app-producto>
+} @placeholder {
+    <h1>Se esta cargando el componente de Producto</h1>
+}
+-->
+
+<h3>Tuberias en Angular</h3>
+
+{{ web | uppercase }}
+
+{{ "El cielo está trillado, quien los desentrillará" | cambiarLetras: false}}

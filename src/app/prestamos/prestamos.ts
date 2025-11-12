@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
+import { CurrencyPipe, DatePipe, SlicePipe } from '@angular/common';
+import { ConvertirASCII } from '../pipes/convertirASCII';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones],
+  imports: [ConvertirASCII, Transacciones, CurrencyPipe, DatePipe, SlicePipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
   public enlaceWeb: string = "https://linkedin.com"
   estadoEnlace = true;
+  frase = 'Hola Angular';
 
   prestamosList = [
     { id: 1, monto: 120, estado: 'Aprobado' },

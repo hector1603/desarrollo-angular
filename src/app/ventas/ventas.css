@@ -1,0 +1,14 @@
+.activo {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: green;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.suspendido {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 10px;
+}
