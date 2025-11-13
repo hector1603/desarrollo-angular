@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
 import { CurrencyPipe, DatePipe, SlicePipe } from '@angular/common';
-import { ConvertirASCII } from '../pipes/convertirASCII';
+import { ConvertirASCII } from '../../pipes/convertirASCII';
 
 @Component({
   selector: 'app-prestamos',

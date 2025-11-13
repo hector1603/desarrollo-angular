@@ -3,7 +3,7 @@ import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, CurrencyPipe, Sl
 
 import { Ventas } from '../ventas/ventas';
 import { Producto } from '../producto/producto';
-import { CambiaLetrasPipe } from '../pipes/cambiarLetras';
+import { CambiaLetrasPipe } from '../../pipes/cambiarLetras';
 
 @Component({
   selector: 'app-usuario',
