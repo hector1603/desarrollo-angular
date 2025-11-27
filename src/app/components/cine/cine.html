@@ -1,0 +1,14 @@
+<h2>{{ titulo }}</h2>
+
+<ol>
+    @for(pelicula of peliculas; track pelicula.id) {
+        <li>{{ pelicula.titulo }} - {{ pelicula.genero }} | {{ pelicula.plataforma }}</li>
+    }
+</ol>
+
+<h2>Formulario | Tho-Way Binding</h2>
+<input type="text" [(ngModel)]="mi_pelicula"/>
+
+<p>
+   Mi pelicula es: <strong>{{ mi_pelicula }}</strong>
+</p>

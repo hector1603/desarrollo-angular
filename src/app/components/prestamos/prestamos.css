@@ -17,16 +17,3 @@ a {
 li {
     margin-bottom: 8px;
 }
-
-.aprobado {
-    background-color: green;
-    border-radius: 20px;
-    padding: 2px 8px;
-    color: #fff;
-}
-
-.pendiente {
-    background-color: orange;
-    border-radius: 20px;
-    padding: 2px 8px;
-}

@@ -1,4 +1,9 @@
 <div class="card">
     <h2 class="title">Componente CUENTA</h2>
     <p>Tipo de cuenta: {{ tipo_cuenta }}</p>
+    <p>Datos de la cuenta:</p>
+    <p>id: {{ cliente1.id }}</p>
+    <p>Nombre: {{ cliente1.nombre }} {{ cliente1.apellido }}</p>
+    <p>Email: {{ cliente1.email }}</p>
+    <p>Saldo: {{ cliente1.saldoCuenta | currency}}</p>
 </div>

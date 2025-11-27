@@ -1,4 +1,8 @@
-li {
+/*li {
+    list-style: none;
+}*/
+
+ol {
     list-style: none;
 }
 
@@ -37,4 +41,24 @@ li {
 
 .message {
     font-size: 1.5rem;
+}
+
+.btn-simple-green {
+    background-color: green;
+    border-radius: 20px;
+    padding: 2px 8px;
+    color: #fff;
+}
+
+.pendiente {
+    background-color: orange;
+    border-radius: 20px;
+    padding: 2px 8px;
+}
+
+.btn-simple-red {
+    background-color: red;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 8px;
 }

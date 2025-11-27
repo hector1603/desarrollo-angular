@@ -1,0 +1,14 @@
+p {
+    margin: 0;
+}
+
+.contenedor {
+    margin: 0, 20px
+}
+
+.card {
+    border: 1px, solid, #0f0f0f;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 8px;
+}

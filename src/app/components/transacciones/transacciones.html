@@ -1,1 +1,15 @@
-<h2 class="sub-title">Transacciones works!</h2>
+<h2 class="sub-title">Lista de transacciones</h2>
+
+<div class="contenedor">
+    @for (transaccion of transaccionesList; track transaccion.id) {
+        <div class="card">
+            <p>{{ transaccion.fecha | date:'dd/MM/yyyy'}} - {{ transaccion.descripcion }}</p>
+            <p>Monto: {{ transaccion.monto }}</p>
+            @if (transaccion.tipo === 'Ingreso') {
+                <p>Tipo de transaccion: <span class="btn-simple-green">{{ transaccion.tipo }}</span></p>
+            } @else {
+                <p>Tipo de transaccion: <span class="btn-simple-red">{{ transaccion.tipo }}</span></p>
+            }
+        </div>
+    }
+</div>
