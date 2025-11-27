@@ -12,7 +12,7 @@ import { Transacciones } from './components/transacciones/transacciones';
 
 @Component({
   selector: 'app-root',
-  imports: [Cuenta, Transacciones],
+  imports: [Transacciones],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

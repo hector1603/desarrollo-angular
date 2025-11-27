@@ -39,6 +39,12 @@ ol {
     color: #ffffff;
 }
 
+input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #575757;
+}
+
 .message {
     font-size: 1.5rem;
 }

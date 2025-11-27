@@ -12,6 +12,7 @@ export class Cine {
   public titulo: string;
   public peliculas: Array<Pelicula>;
   public mi_pelicula: string = '';
+  public tituloPeliculas: string[] = [];
 
   constructor() {
     this.titulo = 'Modelos';
@@ -37,5 +38,16 @@ export class Cine {
 
   ngDoCheck() {
     console.log(this.mi_pelicula);
+  }
+
+  showMovie() {
+    alert(this.mi_pelicula);
+  }
+
+  addMovie() {
+    //this.tituloPeliculas.push(this.mi_pelicula)
+    let identificador = this.peliculas[this.peliculas.length - 1].id + 1;
+    let nuevaPelicula = new Pelicula(identificador, this.mi_pelicula);
+    this.peliculas.push(nuevaPelicula);
   }
 }

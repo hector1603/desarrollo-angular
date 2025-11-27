@@ -9,6 +9,16 @@
 <h2>Formulario | Tho-Way Binding</h2>
 <input type="text" [(ngModel)]="mi_pelicula"/>
 
+<button class="btn btn-primary" (click)="showMovie()">Mostrar pelicula</button>
+<button class="btn btn-success" (click)="addMovie()">Añadir pelicula</button>
+
 <p>
    Mi pelicula es: <strong>{{ mi_pelicula }}</strong>
 </p>
+
+<h2>Mis titulos</h2>
+<ul>
+    @for (titulo of tituloPeliculas; track $index) {
+        <li>{{ titulo }}</li>
+    }
+</ul>
