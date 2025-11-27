@@ -7,6 +7,7 @@ p {
 }
 
 .card {
+    width: 50%;
     border: 1px, solid, #0f0f0f;
     margin-bottom: 10px;
     border-radius: 5px;

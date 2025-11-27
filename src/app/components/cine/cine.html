@@ -1,13 +1,20 @@
 <h2>{{ titulo }}</h2>
 
+<label for="">Elige un color: </label>
+<input type="color" [(ngModel)]="color">
+
 <ol>
-    @for(pelicula of peliculas; track pelicula.id) {
-        <li>{{ pelicula.titulo }} - {{ pelicula.genero }} | {{ pelicula.plataforma }}</li>
+    @for(pelicula of peliculas; track pelicula.id; let indice = $index) {
+        <li>
+            {{ pelicula.titulo }} - <span [ngStyle]="{'background-color': color}">{{ pelicula.genero }}</span> | {{ pelicula.plataforma }}
+            <button (click)="deleteMovie(indice)">🚮</button>
+        </li>
+        
     }
 </ol>
 
 <h2>Formulario | Tho-Way Binding</h2>
-<input type="text" [(ngModel)]="mi_pelicula"/>
+<input type="text" [(ngModel)]="mi_pelicula" (focus)="haciendoFoco()" (blur)="salirDelFoco()" (keyup)="pulsarTecla($event)"/>
 
 <button class="btn btn-primary" (click)="showMovie()">Mostrar pelicula</button>
 <button class="btn btn-success" (click)="addMovie()">Añadir pelicula</button>

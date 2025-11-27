@@ -39,10 +39,11 @@ ol {
     color: #ffffff;
 }
 
-input {
+.input, input {
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #575757;
+    margin-right: 5px;
 }
 
 .message {

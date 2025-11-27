@@ -10,18 +10,30 @@
     <button class="btn btn-default" (click)="cambiarEstadoEnlace()">Activar enlace</button>
 }
 
-<h3 class="sub-title">Lista de prestamos</h3>
 <hr>
 
+<h4 class="sub-title">Nuevo Prestamo</h4>
+<div class="formulario-container">
+    <form (ngSubmit)="addPrestamo()">
+        <input type="number" [(ngModel)]="nuevoMonto" placeholder="Monto" name="montoInput">
+        <select class="input" [(ngModel)]="nuevoEstado" name="estadoSelect">
+            <option value="Aprobado">Aprobado</option>
+            <option value="Pendiente">Pendiente</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+</div>
+
+<h4 class="sub-title">Lista de prestamos</h4>
+
 <ul>
-    @for (prestamo of (prestamosList | slice:0:4); track prestamo.id) {
-        @if(prestamo.estado == 'Aprobado') {
-            <li>Monto: {{ prestamo.monto | currency}} - <span class="aprobado">{{ prestamo.estado }}</span></li>
-        } @else {
-            <li>Monto: {{ prestamo.monto }} - <span class="pendiente">{{ prestamo.estado }}</span></li>
-        }
+    @for (prestamo of prestamosList; track prestamo.id; let indice = $index) {
+        <li>
+            Monto: {{ prestamo.monto | currency}} - <span [class]="(prestamo.estado == 'Aprobado')? 'aprobado': 'pendiente'">{{ prestamo.estado }}</span>
+            <button (click)="deletePrestamo(indice)">Delete</button>
+        </li>
     } @empty {
-        <p class="message">No existen prestamos!</p>
+        <p class="message" [ngStyle]="{'color': orange}">No existen prestamos!</p>
     }
 </ul>
 
