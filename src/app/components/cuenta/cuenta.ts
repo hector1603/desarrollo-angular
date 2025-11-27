@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cliente } from '../../models/cliente';
 import { CurrencyPipe } from '@angular/common';
 @Component({
@@ -10,7 +10,9 @@ import { CurrencyPipe } from '@angular/common';
 export class Cuenta {
   public tipo_cuenta: string = 'Ahorro'
 
-  public cliente1: Cliente = new Cliente(1, 'Hector', 'Ajuamdo', 'hector@gmail.com', 2500);
+  public cliente1: Cliente = new Cliente(1, 'Hector', 'Ajumado', 'hector@gmail.com', 2500);
+
+  @Input() nombreCliente: string = this.cliente1.nombre + ' ' + this.cliente1.apellido;
 
   ngOnInit() {
     console.log("El componente está Arrancando...");

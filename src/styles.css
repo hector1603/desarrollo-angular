@@ -1,6 +1,19 @@
-/*li {
-    list-style: none;
-}*/
+/* -------------------------------------- */
+/* Estilos Globales y Layout Principal */
+/* -------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    background-color: #f4f5f7; /* Fondo del área de contenido principal */
+}
+
+.activarLink {
+    color: #1a73e8;
+    background-color: #e8f0fe;
+    font-weight: 600;
+    border-right: 4px solid #1a73e8;
+}
 
 ol {
     list-style: none;

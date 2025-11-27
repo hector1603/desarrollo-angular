@@ -1,5 +1,7 @@
 <h2 class="sub-title">Lista de transacciones</h2>
 
+<button class="btn btn-primary" (click)="enviarSaludo()">Enviar saludo</button>
+
 <div class="contenedor">
     @for (transaccion of transaccionesList; track transaccion.id) {
         <div class="card">

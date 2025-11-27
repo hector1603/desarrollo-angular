@@ -6,6 +6,10 @@
     <p>Mi dirección es {{ direccion}}</p>
     <p>Mi teléfono es {{ telefono }}</p>
 
+    <hr>
+    <h4 style="color: green;">Mensaje del Componente Hijo: {{ mensajeRecibido }}</h4>
+    <hr>
+
     <!--<app-transacciones></app-transacciones>-->
     <!--<app-prestamos></app-prestamos>-->
     
@@ -16,6 +20,8 @@
     <button class="btn btn-danger"(click)="ocultarCuenta(false)">Ocultar el componente Cuenta</button>
     
     @if(mostrar_cuenta) {
-        <app-cuenta></app-cuenta>
+        <app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
     }
 </div>
+
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)"></app-transacciones>

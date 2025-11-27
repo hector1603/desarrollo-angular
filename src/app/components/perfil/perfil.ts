@@ -18,6 +18,10 @@ export class Perfil {
     public telefono: string;
 
     public mostrar_cuenta = true;
+
+    nombreCliente: string = 'Juan Pérez';
+
+    mensajeRecibido: string = '';
     
     constructor() {
         //alert("¡Bienvenido al perfil, estás dentro de la aplicación!");
@@ -43,5 +47,9 @@ export class Perfil {
 
     ocultarCuenta(valor: boolean) {
         this.mostrar_cuenta = valor; 
-    } 
+    }
+
+    recibirMensaje(mensaje: string) {
+        this.mensajeRecibido = mensaje;
+    }
 }

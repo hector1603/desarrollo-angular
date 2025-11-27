@@ -1,0 +1,256 @@
+/* -------------------------------------- */
+/* Estilos Globales y Layout Principal */
+/* -------------------------------------- */
+
+.app-wrapper {
+    display: flex; /* <-- Contenedor padre de sidebar y main-content */
+    min-height: 100vh;
+    margin-left: 260px; 
+}
+
+/* -------------------------------------- */
+/* 1. Sidebar Contenedor (Fijo al 100% de la altura) */
+/* -------------------------------------- */
+.sidebar {
+    width: 250px; /* Ancho fijo del sidebar */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); /* Sombra suave a la derecha */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    border-right: 1px solid #e0e0e0; /* Línea de separación sutil */
+    
+    /* === FIX PARA ALTURA FIJA Y BOTONES ABAJO === */
+    height: calc(100vh - 20px);; /* Ocupa el 100% de la altura de la ventana */
+    position: fixed; /* ¡Esto lo fija a la ventana! */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Asegura que esté por encima del contenido principal */
+    flex-shrink: 0;
+}
+
+/* -------------------------------------- */
+/* 2. Header (Logo) - Fijo Arriba */
+/* -------------------------------------- */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 30px; /* Espacio debajo del logo */
+    flex-shrink: 0; /* Fijo, no se encoge */
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #4285f4; /* Color azul para el logo */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* -------------------------------------- */
+/* 3. Navegación (Área de Scroll) */
+/* -------------------------------------- */
+.sidebar-nav {
+    flex-grow: 1; /* Ocupa todo el espacio flexible restante */
+    /* === FIX: Scroll solo en la navegación === */
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #5f6368; /* Color de texto normal */
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 15px;
+}
+
+.nav-icon {
+    width: 20px;
+    text-align: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #4285f4; /* Color azul al pasar el ratón */
+    background-color: #f0f4f8;
+}
+
+/* Estilo para el enlace ACTIVO */
+.nav-item.active .nav-link,
+.nav-link.activarLink { /* Usando la clase de routerLinkActive */
+    color: #1a73e8; /* Azul más fuerte para activo */
+    background-color: #e8f0fe;
+    font-weight: 600;
+    border-right: 4px solid #1a73e8; /* Barra lateral de color */
+}
+
+/* Notificación de badge (sin cambios) */
+.badge {
+    margin-left: auto;
+    background-color: #db4437; 
+    color: white;
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 10px;
+}
+
+/* Separador (sin cambios) */
+.separator {
+    height: 1px;
+    background-color: #f1f3f4;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+/* El flex-spacer ya no es necesario porque el .sidebar-nav ocupa el espacio */
+.flex-spacer {
+    display: none; /* Lo ocultamos, aunque no debería estar en el HTML */
+}
+
+/* -------------------------------------- */
+/* 4. Dark Mode Toggle (Fijo Abajo) */
+/* -------------------------------------- */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 15px;
+    border-top: 1px solid #f1f3f4;
+    flex-shrink: 0; /* Fijo, no se encoge */
+}
+
+.toggle-icon {
+    color: #606060;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.dark-mode-toggle span {
+    flex-grow: 1;
+    color: #333;
+}
+
+/* Estilos para el Switch (sin cambios) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #4285f4; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* -------------------------------------- */
+/* 5. Logout Button (Fijo Abajo) */
+/* -------------------------------------- */
+.logout-section {
+    padding: 0 20px 10px;
+    flex-shrink: 0; /* Fijo, no se encoge */
+}
+
+.logout-button {
+    width: 100%;
+    background-color: #5f6368; 
+    color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-button:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+.logout-icon {
+    margin-right: 10px;
+}
+
+/* -------------------------------------- */
+/* 6. Contenido Principal */
+/* -------------------------------------- */
+
+.main-content {
+    flex: 1; 
+    padding: 20px;
+    overflow-y: auto; /* Permite que el scroll ocurra en el contenido principal si es largo */
+}
+
+/* Adaptabilidad para pantallas pequeñas (sin cambios) */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 60px;
+    }
+    .logo-text, .nav-link span, .badge, .dark-mode-toggle span, .logout-button span {
+        display: none; 
+    }
+    /* ... el resto de media queries ... */
+}

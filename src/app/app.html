@@ -1,14 +1,89 @@
-<h1>KrakeDev - Escuela de Programación</h1>
-<h2>{{ titulo }}</h2>
-<p>{{ descripcion }} 🎉</p>
-<hr/>
+<div class="app-wrapper">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-cube logo-icon"></i>
+            <span class="logo-text">KrakeDev</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a routerLink="/inicio" class="nav-link" routerLinkActive="activarLink">
+                        <i class="fas fa-home nav-icon"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/cuenta" class="nav-link" routerLinkActive="activarLink">
+                        <i class="fas fa-wallet nav-icon"></i>
+                        Cuenta
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/transacciones" class="nav-link" routerLinkActive="activarLink">
+                        <i class="fas fa-receipt nav-icon"></i>
+                        Transacciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/prestamos" class="nav-link" routerLinkActive="activarLink">
+                        <i class="fas fa-file-alt nav-icon"></i>
+                        Prestamos
+                    </a>
+                </li>
+                <li class="separator"></li>
+            </ul>
+        </nav>
+
+        <div class="flex-spacer"></div>
+
+        <div class="dark-mode-toggle">
+            <i class="fas fa-moon toggle-icon"></i>
+            <span>Dark Mode</span>
+
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="logout-section">
+            <button class="logout-button">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>KrakeDev - Escuela de Programación</h1>
+        <h2>{{ titulo }}</h2>
+        <p>{{ descripcion }} 🎉</p>
+        <hr/>
 
 
-<!-- <app-producto></app-producto> -->
-<!-- <app-perfil></app-perfil> -->
-<!-- <app-usuario></app-usuario> -->
- <app-prestamos></app-prestamos> 
-<!-- <app-ventas></app-ventas> -->
-<!-- <app-cine></app-cine> -->
-<!-- <app-cuenta></app-cuenta> --> 
-<!-- <app-transacciones></app-transacciones> -->
+        <!-- <app-producto></app-producto> -->
+        <!-- <app-perfil></app-perfil> -->
+        <!-- <app-usuario></app-usuario> -->
+        <!-- <app-prestamos></app-prestamos> -->
+        <!-- <app-ventas></app-ventas> -->
+        <!-- <app-cine></app-cine> -->
+        <!-- <app-cuenta></app-cuenta> -->
+        <!-- <app-transacciones></app-transacciones> -->
+        <!-- <app-padre></app-padre> -->
+
+      
+        <!-- <a routerLink="/inicio" routerLinkActive="activarLink">Inicio</a> &nbsp;
+        <a routerLink="/componentes" routerLinkActive="activarLink">Componentes</a> &nbsp;
+        <a routerLink="/ciclo" routerLinkActive="activarLink">Hooks</a> &nbsp;
+        <a routerLink="/plantillas" routerLinkActive="activarLink">Plantillas</a> &nbsp;
+        <a routerLink="/directivas" routerLinkActive="activarLink">Directivas</a> &nbsp;
+        <a routerLink="/modelos" routerLinkActive="activarLink">Modelos</a> &nbsp;
+        <a routerLink="/comunicacion" routerLinkActive="activarLink">Comunicación</a> &nbsp; -->
+        <router-outlet>
+            <!-- Acá va el componente vinculado a la ruta actual -->
+        </router-outlet>
+    </div>
+
+</div>
